@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "/home/embs/Xilinx/workDCT/heading_error_ffnn",
+    "arguments": [
+      "/home/embs/Xilinx/2025.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/home/embs/Xilinx/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/home/embs/Xilinx/2025.1/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=top_heading_error_ffnn",
+      "-c",
+      "/home/embs/Xilinx/workDCT/heading_error_ffnn/heading_error_ffnn.cpp"
+    ],
+    "file": "/home/embs/Xilinx/workDCT/heading_error_ffnn/heading_error_ffnn.cpp"
+  },
+  {
+    "directory": "/home/embs/Xilinx/workDCT/heading_error_ffnn",
+    "arguments": [
+      "/home/embs/Xilinx/2025.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/home/embs/Xilinx/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/home/embs/Xilinx/2025.1/Vitis/include",
+      "-c",
+      "/home/embs/Xilinx/workDCT/heading_error_ffnn/heading_error_ffnn_tb.cpp"
+    ],
+    "file": "/home/embs/Xilinx/workDCT/heading_error_ffnn/heading_error_ffnn_tb.cpp"
+  }
+]

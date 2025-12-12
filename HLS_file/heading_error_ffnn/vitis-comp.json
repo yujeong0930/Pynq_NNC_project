@@ -1,0 +1,13 @@
+{
+  "name": "heading_error_ffnn",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "heading_error_ffnn.cfg"
+    ],
+    "work_dir": "heading_error_ffnn"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component"
+}
