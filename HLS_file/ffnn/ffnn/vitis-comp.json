@@ -1,0 +1,9 @@
+{
+  "name": "ffnn",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["..\/ffnn.cfg"],
+    "work_dir": "."
+  }
+}

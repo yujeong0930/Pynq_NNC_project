@@ -1,0 +1,3 @@
+relativeroot=/home/embs/Xilinx/workDCT/ffnn
+original_argv=--mode hls --csim --config /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg --work_dir ffnn 
+

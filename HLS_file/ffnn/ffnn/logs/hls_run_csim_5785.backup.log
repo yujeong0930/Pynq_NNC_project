@@ -1,0 +1,91 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir /home/embs/Xilinx/workDCT/ffnn/ffnn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/embs/Xilinx/workDCT/ffnn/ffnn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/embs/Xilinx/workDCT/ffnn/ffnn'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ffnn.cpp' from /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/embs/Xilinx/workDCT/ffnn/ffnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ffnn.h' from /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/embs/Xilinx/workDCT/ffnn/ffnn.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=ffnn_tb.cpp' from /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg(12)
+INFO: [HLS 200-10] Adding test bench file '/home/embs/Xilinx/workDCT/ffnn/ffnn_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=0.5ns' from /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.5ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'sim.O=1' from /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg(9)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/embs/Xilinx/workDCT/ffnn/ffnn/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building optimized C Simulation binaries
+   Compiling ../../../../ffnn_tb.cpp in release mode
+   Compiling ../../../../ffnn.cpp in release mode
+   Generating csim.exe
+===== Test 1 =====
+
+===== Layer4 Output =====
+0: 0.914062
+1: 2.19531
+Output: 0.713806 0.89978 
+
+===== Test 2 =====
+
+===== Layer4 Output =====
+0: 1.96094
+1: 2.11328
+Output: 0.876587 0.892151 
+
+===== Test 3 =====
+
+===== Layer4 Output =====
+0: 2.875
+1: 1.77344
+Output: 0.946594 0.854858 
+
+===== Test 4 =====
+
+===== Layer4 Output =====
+0: 0.949219
+1: 1.35547
+Output: 0.720947 0.794983 
+
+===== Test 5 =====
+
+===== Layer4 Output =====
+0: 1.28516
+1: 2.55859
+Output: 0.783325 0.928101 
+
+===== Test 6 =====
+
+===== Layer4 Output =====
+0: 1.35156
+1: 2.84375
+Output: 0.794373 0.944946 
+
+===== Test 7 =====
+
+===== Layer4 Output =====
+0: 1.40234
+1: 2.92969
+Output: 0.802551 0.94928 
+
+===== Test 8 =====
+
+===== Layer4 Output =====
+0: 1.40625
+1: 2.84375
+Output: 0.803162 0.944946 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 12.31 seconds. Total CPU system time: 0.74 seconds. Total elapsed time: 12.87 seconds; peak allocated memory: 242.359 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 17s

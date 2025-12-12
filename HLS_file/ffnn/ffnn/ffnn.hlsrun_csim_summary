@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "/home/embs/Xilinx/workDCT/ffnn/ffnn/ffnn.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Dec  4 16:29:52 2025",
+ "timestampMillis": "1764894592861",
+ "buildStep": {
+  "cmdId": "491ac10a-3f40-42df-8e9e-62f61195492a",
+  "name": "vitis-run",
+  "logFile": "/home/embs/Xilinx/workDCT/ffnn/ffnn/logs/ffnn.steps.log",
+  "commandLine": "/home/embs/Xilinx/2025.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/embs/Xilinx/workDCT/ffnn/ffnn.cfg --work_dir ffnn ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/embs/Xilinx/workDCT/ffnn/ffnn.cfg",
+   "--work_dir",
+   "ffnn"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/embs/Xilinx/workDCT/ffnn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Dec  4 16:29:52 2025",
+ "timestampMillis": "1764894592861",
+ "status": {
+  "cmdId": "491ac10a-3f40-42df-8e9e-62f61195492a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Dec  4 16:29:56 2025",
+ "timestampMillis": "1764894596409",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/embs/Xilinx/workDCT/ffnn/ffnn.cpp",
+     "/home/embs/Xilinx/workDCT/ffnn/ffnn.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Dec  4 16:29:56 2025",
+ "timestampMillis": "1764894596410",
+ "buildStep": {
+  "cmdId": "8c36c22d-e84b-45de-b545-ab21f5ad4307",
+  "name": "",
+  "logFile": "/home/embs/Xilinx/workDCT/ffnn/ffnn/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/embs/Xilinx/workDCT/ffnn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Dec  4 16:29:56 2025",
+ "timestampMillis": "1764894596410",
+ "status": {
+  "cmdId": "8c36c22d-e84b-45de-b545-ab21f5ad4307",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Dec  4 16:30:05 2025",
+ "timestampMillis": "1764894605844",
+ "status": {
+  "cmdId": "8c36c22d-e84b-45de-b545-ab21f5ad4307",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Dec  4 16:30:05 2025",
+ "timestampMillis": "1764894605926",
+ "status": {
+  "cmdId": "491ac10a-3f40-42df-8e9e-62f61195492a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Dec  4 16:30:05 2025",
+ "timestampMillis": "1764894605927",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Dec  4 16:30:05 2025",
+ "timestampMillis": "1764894605928",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

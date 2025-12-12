@@ -1,0 +1,13 @@
+{
+  "name": "ffnn",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "ffnn.cfg"
+    ],
+    "work_dir": "ffnn"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component"
+}

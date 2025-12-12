@@ -1,0 +1,62 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../ffnn.cpp in release mode
+   Generating csim.exe
+===== Test 1 =====
+
+===== Layer4 Output =====
+0: -0.308594
+1: -0.386719
+Output: 0.418518 0.388367 
+
+===== Test 2 =====
+
+===== Layer4 Output =====
+0: -0.15625
+1: -0.996094
+Output: 0.44928 0.265442 
+
+===== Test 3 =====
+
+===== Layer4 Output =====
+0: 1.39844
+1: -0.601562
+Output: 0.796082 0.344788 
+
+===== Test 4 =====
+
+===== Layer4 Output =====
+0: -0.363281
+1: -1.26172
+Output: 0.403381 0.208984 
+
+===== Test 5 =====
+
+===== Layer4 Output =====
+0: -2.46484
+1: -2.32422
+Output: 0.0744019 0.0834961 
+
+===== Test 6 =====
+
+===== Layer4 Output =====
+0: -2.43359
+1: -2.26172
+Output: 0.0788574 0.0884399 
+
+===== Test 7 =====
+
+===== Layer4 Output =====
+0: -2.46094
+1: -2.28906
+Output: 0.0744019 0.0884399 
+
+===== Test 8 =====
+
+===== Layer4 Output =====
+0: -2.46094
+1: -2.23828
+Output: 0.0744019 0.0936279 
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
