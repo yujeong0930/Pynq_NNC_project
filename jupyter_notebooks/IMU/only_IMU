@@ -1,0 +1,93 @@
+from pynq import Overlay
+from pynq import MMIO
+from pynq.lib.iic import AxiIIC
+import cffi, time
+
+overlay = Overlay("/home/xilinx/pynq/overlays/axi_test.bit")
+
+ADDR_BASE = 0x41600000
+ADDR_RANGE = 0x10000
+i2c_obj = MMIO(ADDR_BASE,ADDR_RANGE)
+
+i2c_obj.write(292,1)
+iic_ip = overlay.ip_dict['axi_iic_0']
+iic = AxiIIC(iic_ip)
+
+ffi = cffi.FFI()
+
+def read_(addr,reg,length=1):
+    iic.send(addr,bytes([reg]),1,0)
+    buf = ffi.new("unsigned char[]",length)
+    iic.receive(addr, buf, length, 0)
+    return [buf[i] for i in range(length)]
+
+def write_(addr, reg, value):
+    iic.send(addr, bytes([reg,value]), 2, 0)
+
+def to_int16(low,high):
+    val = (high << 8) | low
+    if val & 0x8000:
+        val -= 1 << 16
+    return val
+print(overlay.ip_dict.keys())
+
+# BN0055 connection check
+BN0055_addr = 0x28
+chip_addr = 0x00
+chip_id = read_(BN0055_addr, 0x00, 1)[0]
+print("CHIP ID:", hex(chip_id)) #0xA0
+
+#NDOF mode on 0x0C
+
+write_(BN0055_addr, 0x3D, 0X0C)
+time.sleep(0.1)
+
+#calibration check
+cal = read_(BN0055_addr, 0x35, 1)[0]
+sys = (cal >> 6) & 0x03
+gyro = (cal >> 4) & 0x03
+accel = (cal >> 2) & 0x03
+mag = cal & 0x03
+
+print(f"Cal : sys = {sys} Gyro = {gyro} accel = {accel} mag = {mag}")
+
+while True:
+    data = read_(BN0055_addr,0x08,44)
+    ax = to_int16(data[0],data[1]) / 100.0
+    ay = to_int16(data[2],data[3]) / 100.0
+    az = to_int16(data[4],data[5]) / 100.0
+
+    mx = to_int16(data[6],data[7]) / 16.0
+    my = to_int16(data[8],data[9]) / 16.0
+    mz = to_int16(data[10],data[11]) / 16.0
+
+    gx = to_int16(data[12],data[13]) / 900.0
+    gy = to_int16(data[14],data[15]) / 900.0
+    gz = to_int16(data[16],data[17]) / 900.0
+
+    heading = to_int16(data[18],data[19]) / 16.0
+    roll = to_int16(data[20],data[21]) / 16.0
+    pitch = to_int16(data[22],data[23]) / 16.0
+
+    qw = to_int16(data[24],data[25]) / 16384.0
+    qx = to_int16(data[26],data[27]) / 16384.0
+    qy = to_int16(data[28],data[29]) / 16384.0
+    qz = to_int16(data[30],data[31]) / 16384.0
+
+    lx = to_int16(data[32],data[33]) / 100.0
+    ly = to_int16(data[34],data[35]) / 100.0
+    lz = to_int16(data[36],data[37]) / 100.0
+
+    gravity_vectorx = to_int16(data[38],data[39]) / 100.0
+    gravity_vectory = to_int16(data[40],data[41]) / 100.0
+    gravity_vectorz = to_int16(data[42],data[43]) / 100.0
+
+    print("raw data")
+    print(f"[accel] : {ax:.2f}, {ay:.2f}, {az:.2f} m/s^2 | "
+            f"Mag: ({mx:.2f}, {my:.2f}, {mz:.2f}) μT | "
+            f"Gyro: ({gx:.2f}, {gy:.2f}, {gz:.2f}) °/s")
+    print(f"Fusion Euler: Heading={heading:.2f}°, Roll={roll:.2f}°, Pitch={pitch:.2f}°")
+    print(f"[Quaternion] w={qw:.4f}, x={qx:.4f}, y={qy:.4f}, z={qz:.4f}")
+    print(f"[Linear Accel] ({lx:.2f}, {ly:.2f}, {lz:.2f}) m/s² | [Gravity] ({gravity_vectorx:.2f}, {gravity_vectory:.2f}, {gravity_vectorz:.2f}) m/s²")
+    
+    time.sleep(0.02)
